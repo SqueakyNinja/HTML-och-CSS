@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ralph och Edgar</title>
+    <link href="omOss.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- mainDiv för att få ett lager ovanpå backgrunden -->
+    <div class="mainDiv">
+      <h1 class="titleHeader">Ralph och Edgar</h1>
+
+      <!-- Mellan de två dividers blir det en enkel "navigation bar" -->
+      <div class="divider"></div>
+      <div class="buttonDiv">
+        <a href="omOss.html" class="Button">Om oss</a>
+        <a href="galleri.html" class="Button">Galleri</a>
+      </div>
+      <div class="divider"></div>
+
+      <!-- Jag har två klasser på den för att kunna ha det mesta av stylingen från presentationText, men ville ha lite mer specifik på headerText -->
+      <div class="presentationText headerText">
+        <p>Hejhej! Här har vi en sida om oss!</p>
+      </div>
+
+      <!-- En stor div som ska inkludera både bilder och textrutor om de båda katterna -->
+      <div class="introductionDiv">
+        <!-- En mindre div som ligger vid sidan om ralphDiv. Innehåller information och bild -->
+        <div class="eddieDiv">
+          <!-- Informationsruta -->
+          <div class="presentationText">
+            <h4>Edgar</h4>
+            <ul>
+              <li>Älskar att skvätta vatten överallt</li>
+              <li>Kallas alltid Eddie</li>
+              <li>Överdrivet social mot främmlingar, djur som människor</li>
+              <li>Döpt efter Edgar i Aristocats</li>
+            </ul>
+          </div>
+          <!-- Bild -->
+          <img
+            src="images/omOss/IMG_20191220_200214.jpg"
+            alt="Picture of Eddie"
+            class="introductionImg"
+          />
+        </div>
+
+        <!-- En mindre div som ligger vid sidan om eddieDiv. Innehåller information och bild -->
+        <div class="ralphDiv">
+          <!-- informationsruta -->
+          <div class="presentationText">
+            <h4>Ralph</h4>
+            <ul>
+              <li>Älskar att sova i alla möjliga positioner</li>
+              <li>Pratar massor</li>
+              <li>Är 2 månader äldre än Eddie</li>
+              <li>Döpt efter Wreck-it Ralph</li>
+            </ul>
+          </div>
+          <!-- Bild -->
+          <img
+            src="images/omOss/IMG_20200822_115652.jpg"
+            alt="Picture of Ralph"
+            class="introductionImg"
+          />
+        </div>
+      </div>
+      <!-- Här stängs introductionDiv  -->
+
+      <div class="divider" id="midDivider"></div>
+
+      <div class="galleriDiv">
+        <div class="eddieDiv">
+          <img
+            src="images/Galleri/Skogspromenad/IMG_20201002_144105.jpg"
+            alt="Picture of Eddie"
+            class="introductionImg"
+          />
+        </div>
+        <div class="ralphDiv">
+          <img
+            src="images/Galleri/Tupplur/IMG_20200816_095323.jpg"
+            alt="Picture of Ralph"
+            class="introductionImg"
+          />
+        </div>
+      </div>
+
+      <!-- Än så  länge det nedersta på sidan. Vill inte sätta det som en footer, har inte bestämt mig för vad jag vill ha längst ner än. -->
+      <div class="divider dividerGap"></div>
+      <div class="tipsDiv">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+          target="_blank"
+          class="Button"
+          >Tips för HTML</a
+        ><a
+          href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+          target="_blank"
+          class="Button"
+          >Tips för CSS</a
+        ><a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+          target="_blank"
+          class="Button"
+          >Tips för JavaScript</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

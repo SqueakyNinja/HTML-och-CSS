@@ -1,0 +1,22 @@
+#idName {
+  color: aqua;
+}
+
+.className {
+  color: blueviolet;
+}
+
+textarea {
+  font-size: 20px;
+}
+
+.headingBig {
+  font-style: italic;
+}
+
+.buttonClass {
+  background-color: #b434eb;
+  color: #ffffff;
+  border-radius: 10px;
+  border-width: 0px;
+}
