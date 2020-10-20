@@ -17,6 +17,40 @@
       <div class="greenDiv"></div>
       <div class="purpleDiv"></div>
       <div class="yellowDiv"></div>
+      <nav role="navigation"></nav>
+
+    <!-- navbar -->
+    <div class="dropdown">
+      <button  onclick="toggleNavbar()" class="dropBtn">dropdown</button>
+      <ul class="dropdown-content dropdownList">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <button  onclick="toggleNavbar2()" class="dropBtn2">dropdown</button>
+      <div class="dropdown-content dropdownList2">
+        <a href="javascript:;" onclick=toggleFacebook()>Facebook</a>
+        <div class="hide facebookDropdown">
+          <a href="#">1</a> 
+          <a href="#">2</a> 
+          <a href="#">3</a> 
+        </div>
+        <a href="#">Google</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+      
+      
+      <!-- flexlist -->
+      <ul class="flex">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
