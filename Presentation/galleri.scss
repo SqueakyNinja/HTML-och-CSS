@@ -35,8 +35,16 @@ html {
   flex-wrap: wrap;
 }
 
+.btnList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
 .btn {
-  margin: 14px auto;
   margin: 10px 10px;
   padding: 8px 10px;
 }
@@ -120,70 +128,26 @@ img {
   grid-column-end: 3;
 }
 
-.hamburger {
-  width: 48px;
-  border: 1px solid #696969;
-  border-radius: 4px;
-  padding: 7px 0;
-  cursor: pointer;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-top: 13px;
-  height: 11.4px;
-
-  div {
-    width: 23px;
-    height: 1.8px;
-    background-color: #696969;
-    border-radius: 4px;
-    transition: transform 180ms ease-in-out;
-
-    &:nth-child(1),
-    &:nth-child(3) {
-      transform-origin: 100% 50%;
-      transition-delay: 50ms;
-    }
+.dropdown:hover {
+  .dropdownList {
+    display: flex;
   }
-
-  * + * {
-    margin-top: 3px;
+  .dropbtn {
+    border-bottom-left-radius: 0px;
   }
-
-  &.open {
-    > div {
-      &:nth-child(1) {
-        transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
-      }
-
-      &:nth-child(2) {
-        transform: scale3d(0, 0, 0);
-      }
-
-      &:nth-child(3) {
-        transform: rotateZ(43deg) translate3d(0px, 4px, 0);
-      }
-    }
-  }
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-button {
-  border: none;
 }
 
 .dropdownList {
   display: none;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   background-color: #696969;
-  margin: 10px 10px;
+  border-radius: 0px 0px 4px 4px;
+  margin-left: 10px;
+  margin-top: 7px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 
   a {
     padding: 10px 10px;
@@ -194,14 +158,13 @@ button {
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     &:hover {
       background-color: #757575;
     }
   }
-}
-
-.show {
-  display: flex;
 }
 
 @media screen and (max-width: 1024px) {
@@ -221,8 +184,5 @@ button {
   .lastImg {
     grid-column-start: 1;
     grid-column-end: 2;
-  }
-  .hamburger {
-    display: flex;
   }
 }
