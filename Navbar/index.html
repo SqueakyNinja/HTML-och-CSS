@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Demo</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <img class="imageInHeader" src="img.jpg" alt="" />
+      <div class="navbarDiv">
+        <div onclick="toggleHamburger()" class="hamburger" id="button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="navbarList">
+          <li class="navlistItem"><a href="#">Första</a></li>
+          <li class="navlistItem"><a href="#">Andra</a></li>
+          <li class="navlistItem"><a href="#">Tredje</a></li>
+          <div class="navlistItem">
+            <a href="#" onclick="toggleList()" class="navbarButton"
+              >Fjärde <i id="arrowDown" class="fa fa-angle-down"></i
+            ></a>
+            <div class="dropdownContent">
+              <ul>
+                <li class="navlistItem"><a href="#">Ett</a></li>
+                <li class="navlistItem"><a href="#">Två</a></li>
+                <li class="navlistItem"><a href="#">Tre</a></li>
+                <li class="navlistItem"><a href="#">Fyra</a></li>
+              </ul>
+            </div>
+          </div>
+          <li class="navlistItem"><a href="#">Femte</a></li>
+        </ul>
+      </div>
+
+      <div class="mainArea">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi animi
+        possimus aliquid sint quia inventore molestiae deleniti? Magni laborum
+        eveniet provident facilis asperiores totam assumenda quasi tempora
+        molestiae. Ex sequi, consectetur sint adipisci hic provident deserunt.
+        Nesciunt recusandae sequi magni dolore eos ut esse. Assumenda ratione
+        natus reprehenderit ullam totam.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
