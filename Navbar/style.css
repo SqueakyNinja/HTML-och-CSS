@@ -1,5 +1,7 @@
 * {
   font-family: "Open Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -39,7 +41,12 @@ body {
   height: 60px;
 }
 
-.navbarDiv .navbarList {
+.navbarTitle {
+  color: white;
+  margin: 8px 0px 9px 20px;
+}
+
+.navbarListDiv {
   background-color: darkgreen;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,14 +62,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
-  margin-top: 60px;
+  margin-top: -2px;
   height: 0;
   overflow: hidden;
   -webkit-transition: height 300ms ease-in-out;
   transition: height 300ms ease-in-out;
 }
 
-.navbarDiv .navbarList .navlistItem {
+.navbarListParent {
   padding: 1rem 0;
   width: 100%;
   text-align: center;
@@ -73,17 +80,76 @@ body {
   position: relative;
 }
 
-.navbarDiv .navbarList .navlistItem:hover {
-  background-color: green;
-}
-
-.navbarDiv .navbarList .navlistItem a {
-  padding: 1rem 44vw;
+.navbarListParent > a {
+  background-color: darkgreen;
+  padding: 1rem calc(47vw - 30px);
   text-decoration: none;
   color: white;
 }
 
-.navbarDiv .dropdownContent {
+.navbarListParent > a:active {
+  background-color: green;
+}
+
+.dropdownDiv {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+}
+
+.dropdownContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+}
+
+.navbarListItem {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.navbarListItem:first-of-type {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.navbarListItem a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: darkgreen;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  padding: 1rem 44vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.navbarListItem a:active {
+  background-color: green;
+}
+
+.dropdownContent2 {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,27 +160,31 @@ body {
           flex-direction: column;
   width: 100%;
   z-index: 1;
-  background-color: green;
-  margin-top: 1rem;
+  margin: 0;
   height: 0;
   overflow: hidden;
   -webkit-transition: height 300ms ease-in-out;
   transition: height 300ms ease-in-out;
 }
 
-.navbarDiv .dropdownContent ul {
+ul {
   list-style: none;
   padding: 0;
 }
 
-.navbarDiv .dropdownContent li {
+ul li {
   color: white;
   text-decoration: none;
   text-align: center;
-  padding: 0 !important;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
 }
 
-.navbarDiv .dropdownContent li a {
+ul li:first-of-type {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+ul li a {
+  background-color: #003100;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   -webkit-transition: 150ms ease-in-out;
@@ -128,15 +198,22 @@ body {
           justify-content: center;
 }
 
-.navbarDiv .dropdownContent li a:hover {
-  background-color: darkgreen;
+ul li a:active {
+  background-color: green;
 }
 
-.navbarDiv .show {
+.toggleShow {
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+}
+
+.show {
   height: 100vh;
 }
 
-.navbarDiv .hamburger {
+.hamburger {
   width: 48px;
   border: 1px solid #f8f9fa;
   border-radius: 4px;
@@ -160,7 +237,7 @@ body {
   right: 1rem;
 }
 
-.navbarDiv .hamburger div {
+.hamburger div {
   width: 23px;
   height: 2px;
   background: #f8f9fa;
@@ -171,28 +248,28 @@ body {
   transition: transform 180ms ease-in-out, -webkit-transform 180ms ease-in-out;
 }
 
-.navbarDiv .hamburger div:nth-child(1), .navbarDiv .hamburger div:nth-child(3) {
+.hamburger div:nth-child(1), .hamburger div:nth-child(3) {
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
   -webkit-transition-delay: 50ms;
           transition-delay: 50ms;
 }
 
-.navbarDiv .hamburger * + * {
+.hamburger * + * {
   margin-top: 3px;
 }
 
-.navbarDiv .hamburger.open > div:nth-child(1) {
+.hamburger.open > div:nth-child(1) {
   -webkit-transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
           transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
 }
 
-.navbarDiv .hamburger.open > div:nth-child(2) {
+.hamburger.open > div:nth-child(2) {
   -webkit-transform: scale3d(0, 0, 0);
           transform: scale3d(0, 0, 0);
 }
 
-.navbarDiv .hamburger.open > div:nth-child(3) {
+.hamburger.open > div:nth-child(3) {
   -webkit-transform: rotateZ(43deg) translate3d(0px, 4px, 0);
           transform: rotateZ(43deg) translate3d(0px, 4px, 0);
 }
@@ -222,10 +299,87 @@ body {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-.toggleShow {
-  height: 100vh !important;
-  overflow: hidden;
-  -webkit-transition: height 300ms ease-in-out;
-  transition: height 300ms ease-in-out;
+@media screen and (min-width: 768px) {
+  .navbarDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbarDiv .inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .navbarDiv .hamburger {
+    display: none;
+  }
+  .navbarDiv .navbarListDiv {
+    overflow: hidden;
+    list-style: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 60px;
+    z-index: 1;
+    overflow: visible;
+    margin: 0 2rem 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: height 0ms ease-in-out;
+    transition: height 0ms ease-in-out;
+  }
+  .navbarDiv .navbarListDiv .navbarListItem,
+  .navbarDiv .navbarListDiv .navbarListParent {
+    width: 93px;
+    border: none;
+  }
+  .navbarDiv .navbarListDiv .navbarListItem:first-child,
+  .navbarDiv .navbarListDiv .navbarListParent:first-child {
+    border: none;
+  }
+  .navbarDiv .navbarListDiv .navbarListItem a,
+  .navbarDiv .navbarListDiv .navbarListParent a {
+    -webkit-transition: 150ms ease-in-out;
+    transition: 150ms ease-in-out;
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  .navbarDiv .navbarListDiv .navbarListItem a:hover,
+  .navbarDiv .navbarListDiv .navbarListParent a:hover {
+    background-color: green;
+  }
+  .navbarDiv .dropdownContent {
+    margin-top: 19px;
+  }
+  .navbarDiv .dropdownContent .navbarListItem {
+    padding: 0 !important;
+  }
+  .navbarDiv .dropdownContent a {
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+    width: 93px;
+  }
+  .navbarDiv .dropdownContent a:hover {
+    background-color: #01a001;
+  }
+  .navbarDiv .dropdownContent2 {
+    position: relative;
+    padding: 0;
+  }
+  .navbarDiv .toggleShow {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .navbarDiv .toggleShow li {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -18,29 +18,42 @@
     <div class="mainDiv">
       <img class="imageInHeader" src="img.jpg" alt="" />
       <div class="navbarDiv">
+        <div class="inline"><h1 class="navbarTitle">Brand & CO</h1></div>
         <div onclick="toggleHamburger()" class="hamburger" id="button">
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <ul class="navbarList">
-          <li class="navlistItem"><a href="#">Första</a></li>
-          <li class="navlistItem"><a href="#">Andra</a></li>
-          <li class="navlistItem"><a href="#">Tredje</a></li>
-          <div class="navlistItem">
-            <a href="#" onclick="toggleList()" class="navbarButton"
+        <ul class="navbarListDiv">
+          <li class="navbarListParent"><a href="#">Första</a></li>
+          <li class="navbarListParent"><a href="#">Andra</a></li>
+          <li class="navbarListParent"><a href="#">Tredje</a></li>
+          <div class="navbarListParent">
+            <a href="javascript:void(0);" onclick="toggleList()"
               >Fjärde <i id="arrowDown" class="fa fa-angle-down"></i
             ></a>
-            <div class="dropdownContent">
-              <ul>
-                <li class="navlistItem"><a href="#">Ett</a></li>
-                <li class="navlistItem"><a href="#">Två</a></li>
-                <li class="navlistItem"><a href="#">Tre</a></li>
-                <li class="navlistItem"><a href="#">Fyra</a></li>
+            <div class="dropdownDiv">
+              <ul class="dropdownContent">
+                <li class="navbarListItem"><a href="#">Ett</a></li>
+                <li class="navbarListItem"><a href="#">Två</a></li>
+                <div class="navbarListItem">
+                  <a href="javascript:void(0);" onclick="toggleList2()"
+                    >Tre <i id="arrowDown2" class="fa fa-angle-down"></i
+                  ></a>
+                  <div class="dropdownContent2">
+                    <ul>
+                      <li class="navbarListItem"><a href="#">One</a></li>
+                      <li class="navbarListItem"><a href="#">Two</a></li>
+                      <li class="navbarListItem"><a href="#">Three</a></li>
+                      <li class="navbarListItem"><a href="#">Four</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <li class="navbarListItem"><a href="#">Fyra</a></li>
               </ul>
             </div>
           </div>
-          <li class="navlistItem"><a href="#">Femte</a></li>
+          <li class="navbarListParent"><a href="#">Femte</a></li>
         </ul>
       </div>
 
