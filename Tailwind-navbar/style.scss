@@ -1,0 +1,49 @@
+.move-image {
+  object-position: 0 57%;
+}
+
+.hamburger {
+  width: 48px;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  padding: 7px 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    width: 23px;
+    height: 2px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    transition: transform 180ms ease-in-out;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      transform-origin: 100% 50%;
+      transition-delay: 50ms;
+    }
+  }
+
+  * + * {
+    margin-top: 3px;
+  }
+
+  &.open {
+    > div {
+      &:nth-child(1) {
+        transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
+      }
+
+      &:nth-child(2) {
+        transform: scale3d(0, 0, 0);
+      }
+
+      &:nth-child(3) {
+        transform: rotateZ(43deg) translate3d(0px, 4px, 0);
+      }
+    }
+  }
+}

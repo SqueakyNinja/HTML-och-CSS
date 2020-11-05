@@ -1,0 +1,63 @@
+.move-image {
+  -o-object-position: 0 57%;
+     object-position: 0 57%;
+}
+
+.hamburger {
+  width: 48px;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  padding: 7px 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hamburger div {
+  width: 23px;
+  height: 2px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 180ms ease-in-out;
+  transition: -webkit-transform 180ms ease-in-out;
+  transition: transform 180ms ease-in-out;
+  transition: transform 180ms ease-in-out, -webkit-transform 180ms ease-in-out;
+}
+
+.hamburger div:nth-child(1), .hamburger div:nth-child(3) {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
+}
+
+.hamburger * + * {
+  margin-top: 3px;
+}
+
+.hamburger.open > div:nth-child(1) {
+  -webkit-transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
+          transform: rotateZ(-43deg) translate3d(0px, -4px, 0);
+}
+
+.hamburger.open > div:nth-child(2) {
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+}
+
+.hamburger.open > div:nth-child(3) {
+  -webkit-transform: rotateZ(43deg) translate3d(0px, 4px, 0);
+          transform: rotateZ(43deg) translate3d(0px, 4px, 0);
+}
+/*# sourceMappingURL=style.css.map */

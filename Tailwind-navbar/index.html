@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind-navbar</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex-col justify-center content-center box-border">
+      <img class="h-64 w-full object-cover move-image" src="img.jpg" alt="" />
+      <header
+        class="w-full h-16 bg-green-500 flex justify-between items-center px-5 shadow-md"
+      >
+        <div>
+          <h1 class="text-white text-4xl font-medium tracking-wide">
+            Brand & CO
+          </h1>
+        </div>
+        <div onclick="toggleHamburger()" class="hamburger" id="button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </header>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
